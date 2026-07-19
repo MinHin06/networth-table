@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>networth table</title>
+		<title>three.js css3d - periodic table</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<meta property="og:title" content="three.js css3d - periodic table">
@@ -13,14 +13,14 @@
 			a {
 				color: #8ff;
 			}
- 
+
 			#menu {
 				position: absolute;
 				bottom: 20px;
 				width: 100%;
 				text-align: center;
 			}
- 
+
 			.element {
 				width: 120px;
 				height: 160px;
@@ -31,12 +31,12 @@
 				line-height: normal;
 				cursor: default;
 			}
- 
+
 			.element:hover {
 				box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
 				border: 1px solid rgba(127,255,255,0.75);
 			}
- 
+
 				.element .country {
 					position: absolute;
 					top: 8px;
@@ -44,7 +44,7 @@
 					font-size: 11px;
 					color: rgba(127,255,255,0.85);
 				}
- 
+
 				.element .age {
 					position: absolute;
 					top: 8px;
@@ -52,7 +52,7 @@
 					font-size: 11px;
 					color: rgba(127,255,255,0.85);
 				}
- 
+
 				.element .photo {
 					width: 70px;
 					height: 70px;
@@ -61,7 +61,7 @@
 					margin: 30px auto 0;
 					display: block;
 				}
- 
+
 				.element .name {
 					margin-top: 10px;
 					font-size: 14px;
@@ -69,7 +69,7 @@
 					color: rgba(255,255,255,0.9);
 					text-shadow: 0 0 6px rgba(0,255,255,0.8);
 				}
- 
+
 				.element .interest {
 					position: absolute;
 					bottom: 10px;
@@ -78,7 +78,7 @@
 					font-size: 11px;
 					color: rgba(127,255,255,0.75);
 				}
- 
+
 			button {
 				color: rgba(127,255,255,0.75);
 				background: transparent;
@@ -87,11 +87,11 @@
 				padding: 5px 10px;
 				cursor: pointer;
 			}
- 
+
 			button:hover {
 				background-color: rgba(0,255,255,0.5);
 			}
- 
+
 			button:active {
 				color: #000000;
 				background-color: rgba(0,255,255,0.75);
@@ -99,16 +99,16 @@
 		</style>
 	</head>
 	<body>
- 
+
 		<script>
 			// Guard: bounce back to login if there's no proof of sign-in
 			if ( ! sessionStorage.getItem( 'user_email' ) ) {
- 
+
 				window.location.href = 'index.html';
- 
+
 			}
 		</script>
- 
+
 		<div id="info">Signed in as <span id="user-name"></span> — <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> css3d - net worth table.</div>
 		<div id="container"></div>
 		<div id="menu">
@@ -117,7 +117,7 @@
 			<button id="helix">HELIX</button>
 			<button id="grid">GRID</button>
 		</div>
- 
+
 		<script type="importmap">
 			{
 				"imports": {
@@ -126,13 +126,11 @@
 				}
 			}
 		</script>
- 
-		<script type="module" src="./main.js"></script>
- 
-	</body>
-</html>
 
 		<script type="module" src="./main.js"></script>
+
+	</body>
+</html>
 
 	</body>
 </html>
