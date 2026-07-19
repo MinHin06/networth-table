@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Login</title>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+  <div id="login-screen">
+    <h2>Welcome Back</h2>
+
+    <div id="g_id_onload"
+         data-client_id="928099848628-dufdocq3ds509rfe8hfsjdvo0phgmdp5.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse">
+    </div>
+    <div class="g_id_signin"></div>
+  </div>
+
+  <script>
+    function handleCredentialResponse(response) {
+      // Decode the JWT Google sends back to get the user's info
+      const payload = JSON.parse(atob(response.credential.split('.')[1]));
+
+      // Store proof of sign-in so content.html knows the user is authenticated
+      sessionStorage.setItem('user_name', payload.name);
+      sessionStorage.setItem('user_email', payload.email);
+
+      // Send them to the visualization page
+      window.location.href = 'content.html';
+    }
+  </script>
+
+</body>
+</html>

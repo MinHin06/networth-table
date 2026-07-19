@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>three.js css3d - periodic table</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta property="og:title" content="three.js css3d - periodic table">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://threejs.org/examples/css3d_periodictable.html">
+		<meta property="og:image" content="https://threejs.org/examples/screenshots/css3d_periodictable.jpg">
+		<link type="text/css" rel="stylesheet" href="main.css">
+		<style>
+			a {
+				color: #8ff;
+			}
+
+			#menu {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				text-align: center;
+			}
+
+			.element {
+				width: 120px;
+				height: 160px;
+				box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+				border: 1px solid rgba(127,255,255,0.25);
+				font-family: Helvetica, sans-serif;
+				text-align: center;
+				line-height: normal;
+				cursor: default;
+			}
+
+			.element:hover {
+				box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
+				border: 1px solid rgba(127,255,255,0.75);
+			}
+
+				.element .country {
+					position: absolute;
+					top: 8px;
+					left: 10px;
+					font-size: 11px;
+					color: rgba(127,255,255,0.85);
+				}
+
+				.element .age {
+					position: absolute;
+					top: 8px;
+					right: 10px;
+					font-size: 11px;
+					color: rgba(127,255,255,0.85);
+				}
+
+				.element .photo {
+					width: 70px;
+					height: 70px;
+					object-fit: cover;
+					border-radius: 4px;
+					margin: 30px auto 0;
+					display: block;
+				}
+
+				.element .name {
+					margin-top: 10px;
+					font-size: 14px;
+					font-weight: bold;
+					color: rgba(255,255,255,0.9);
+					text-shadow: 0 0 6px rgba(0,255,255,0.8);
+				}
+
+				.element .interest {
+					position: absolute;
+					bottom: 10px;
+					left: 0px;
+					right: 0px;
+					font-size: 11px;
+					color: rgba(127,255,255,0.75);
+				}
+
+			button {
+				color: rgba(127,255,255,0.75);
+				background: transparent;
+				outline: 1px solid rgba(127,255,255,0.75);
+				border: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+
+			button:hover {
+				background-color: rgba(0,255,255,0.5);
+			}
+
+			button:active {
+				color: #000000;
+				background-color: rgba(0,255,255,0.75);
+			}
+		</style>
+	</head>
+	<body>
+
+		<script>
+			// Guard: bounce back to login if there's no proof of sign-in
+			if ( ! sessionStorage.getItem( 'user_email' ) ) {
+
+				window.location.href = 'login.html';
+
+			}
+		</script>
+
+		<div id="info">Signed in as <span id="user-name"></span> — <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> css3d - net worth table.</div>
+		<div id="container"></div>
+		<div id="menu">
+			<button id="table">TABLE</button>
+			<button id="sphere">SPHERE</button>
+			<button id="helix">HELIX</button>
+			<button id="grid">GRID</button>
+		</div>
+
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+				}
+			}
+		</script>
+
+		<script type="module" src="./main.js"></script>
+
+	</body>
+</html>
