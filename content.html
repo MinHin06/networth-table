@@ -102,13 +102,11 @@
 
 		<script>
 			if ( ! sessionStorage.getItem( 'user_email' ) ) {
-
 				window.location.href = 'index.html';
-
 			}
 		</script>
 
-		<div id="info">Signed in as <span id="user-name">
+		<div id="info">Signed in as <span id="user-name"></span> — <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a>
 		<div id="container"></div>
 		<div id="menu">
 			<button id="table">TABLE</button>
